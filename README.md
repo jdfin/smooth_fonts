@@ -52,11 +52,11 @@ Start BMFont.
 
 Options/Font Settings:
 
-<img src="images/bmfont_fontsettings.png" height="500">
+<img src="images/bmfont_fontsettings.png" height="432">
 
 Options/Export Options:
 
-<img src="images/bmfont_exportoptions.png" height="500">
+<img src="images/bmfont_exportoptions.png" height="488">
 
 Options/Save bitmap font as..., and give it a nice filename,
 e.g. consolas\_36 for this example.
