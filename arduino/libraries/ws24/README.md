@@ -5,19 +5,19 @@ This is an Arduino library for the
 
 Waveshare has a
 [library and examples](https://www.waveshare.com/w/upload/e/e9/LCD_Module_code.7z)
-for the screen. The Arduino code is not very efficient with the SPI
-bus, and seemed a bit awkward as far as extending it (e.g. chip select
-usage, data/command might be set over here and assumed correct over
-there). Some just looks wrong, like initialization commands that don't
-have the right number of parameters. But it works.
+for the screen, but the Arduino code is not very efficient with the SPI
+bus (slow), and seemed a bit awkward as far as extending it (e.g. chip
+select usage, or data/command might be set over here and assumed correct
+over there). Some just looks wrong, like initialization commands that
+don't have the right number of parameters. But it seems to work.
 
 What I wanted was the ability to easily add more fonts without typing
-in bitmasks. This allows generating source for an arbitrary font from
-one on your PC, then rendering it on the LCD. There are no other
-graphics operations (e.g. lines, circles), just rendering smoothed
+in bitmasks. Stuff in this repo allows generating source for an arbitrary
+font from one on your PC, then rendering it on the LCD. There are no
+other graphics operations (e.g. lines, circles), just rendering smoothed
 text. The only part of the Waveshare software used here is the values
 written to various registers at init time. Some doesn't look right,
-but I don't think one can fix it (or see that it's correct) without
+but I don't think one can fix it (or verify that it's correct) without
 more information from Waveshare and/or errata from ILITEK.
 
 If you need more features, you can:
@@ -27,17 +27,17 @@ If you need more features, you can:
   they do smoothed fonts, but it's probably the most complete package
   otherwise.
 
-I don't know if you can use one vendor's ILI9341 software on another
-vendor's ILI9341-based module. Some of the initialization appears to
-be screen-specific. Plus you should really buy the hardware from
-whoever wrote the software.
+I don't think you can blindly use one vendor's ILI9341 software on
+another vendor's ILI9341-based module. Some of the initialization appears
+to be screen-specific. Plus you should really buy the hardware from
+whoever wrote the software if you can.
 
 # Usage
 
-Create one or more fonts. See the README at the top level of this repo.
-Put the font(s) in arduino/library/fonts/.
+Create one or more fonts using BMFont and make\_font. See the README at
+the top level of this repo. Put the font(s) in arduino/library/fonts/.
 
-Create a sketch similar to "LCD Demo", or modify it to use your font
+Create a sketch similar to "font\_demo", or modify it to use your font
 and your gpios.
 
 I only use arduino-cli (not the gui). There are some scripts in the
