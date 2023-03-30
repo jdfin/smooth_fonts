@@ -17,7 +17,7 @@ also create a brd-\*.bat file.
 4. Run the brd-\*.bat init file. All this does is set the FQBN in
 your environment.
 
-5. Run ac-build <sketch-name> <com-port> to build and download a
+5. Run ac-build \<sketch-name\> \<com-port\> to build and download a
 sketch. You can leave off com-port and it will just build.
 
 6. Other stuff:
