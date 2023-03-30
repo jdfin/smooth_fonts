@@ -3,8 +3,18 @@
 I use scripts here to help me with the arduino cli tool. Everything
 is from the Windows cmd.exe prompt.
 
+Building and running font_demo should be easy to do with the IDE;
+I just have not done that.
+
+0. You may need git and python3 available at your cmd.exe prompt,
+depending on what is being downloaded and run in ac-init. Installing
+[earlephilhower arduino-pico](https://github.com/earlephilhower/arduino-pico)
+(what I use for rp2040) requires both; not sure if either is required
+for anything else.
+
 1. Get [arduino-cli.exe](https://github.com/arduino/arduino-cli/releases)
-and put it in this directory.
+and put it in this directory. This has to be available before running
+ac-init.
 
 2. Edit ac-init.bat to add/remove board manager URLs, and arduino
 cores. Typically this means commenting/uncommenting one or more of
