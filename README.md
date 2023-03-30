@@ -51,12 +51,12 @@ $ make -C build
 Start BMFont.
 
 Options/Font Settings:
-[Options/Font Settings](images/bmfont_fontsettings.png)
+![Options/Font Settings](images/bmfont_fontsettings.png)
 
-Options / Export Options:
-[Options/Export Options](images/bmfont_exportoptions.png)
+Options/Export Options:
+![Options/Export Options](images/bmfont_exportoptions.png)
 
-Options / Save bitmap font as..., and give it a nice filename,
+Options/Save bitmap font as..., and give it a nice filename,
 e.g. consolas\_36 for this example.
 
 You should now have consolas\_36.fnt and consolas\_36\_0.png.
