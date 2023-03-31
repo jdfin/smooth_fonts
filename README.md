@@ -73,6 +73,15 @@ $ build/make\_font consolas\_36
 You should now have consolas\_36.h and consolas\_36.cpp. Use these
 in your program, like in the arduino sample in this repo.
 
+If you do all this and build a sketch that seems to render characters
+nicely, but is rendering the wrong characters, go look at the .png
+file you gave to make\_font and see if it has what looks like an ascii
+character set. If not, try starting BMFont fresh, regenerating the .fnt
+and .png files for the font, regenerating the .cpp and .h files with
+make\_font, and rebuilding the sketch. In at least one instance, I
+somehow ended up with a .png file for a font that had strange characters,
+like a different code page or whatever. Most likely my mistake.
+
 ## Limitations
 
 Check a font's licensing against how you plan to use it.
